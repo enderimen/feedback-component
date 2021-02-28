@@ -17,7 +17,7 @@
         & img {
           display: none;
         }
-        
+
         & + form {
           opacity: 0;
         }
@@ -104,6 +104,37 @@
     line-height: 16px;
     color: #5D698D;
     margin-bottom: 25px;
+  }
+
+  &__message {
+    height: 70px;
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #DCDFF1;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+
+    &Title {
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 16px;
+
+      color: #202842;
+      margin-bottom: 6px;
+    }
+
+    &Area {
+      height: 0;
+      overflow: hidden;
+      width: 100%;
+      transition: 300ms height;
+
+      &.-opened {
+        height: 95px;
+        margin-bottom: 25px;
+      }
+    }
   }
 }
 

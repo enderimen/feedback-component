@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.scss">
-    <title>Feedback Components | Pure CSS</title>
+    <title>Feedback Components | Pure JS & CSS</title>
 </head>
 <body>
     <section class="o-feedback">
@@ -16,7 +16,7 @@
             <form class="m-feedback__numberVersion">
                 <h3 class="m-feedback__numberTitle">How likely are you to answer to this question?</h3>
 
-                <ul class="m-rate__list">
+                <ul class="m-rate__list js-rate">
                     <li class="m-rate__button" role="button">
                         <input type="radio" name="name" id="rate-0">
                         <label for="rate-0">
@@ -81,6 +81,11 @@
                 <div class="m-rate__degree">
                     <span>Not likely at all</span>
                     <span>Extremely likely</span>
+                </div>
+
+                <div class="m-rate__messageArea">
+                    <h5 class="m-rate__messageTitle">Tell us how we can improve</h5>
+                    <textarea class="m-rate__message" placeholder="Write message here"></textarea>
                 </div>
 
                 <div class="m-row">
