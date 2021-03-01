@@ -94,6 +94,48 @@
                 </div>
             </form>
         </div>
+
+        <div class="m-sentiment">
+            <input type="checkbox" id="closeSentiment">
+            <label for="closeSentiment">
+                <img src="./assets/icons/close.png" alt="Close Feedback">
+            </label>
+
+            <form class="m-sentiment__form">
+                <h3 class="m-sentiment__title">How likely are you to answer to this question?</h3>
+
+                <ul class="m-sentiment__list js-sentimentRate">
+                    <li class="m-sentiment__button" role="button">
+                        <input type="radio" name="rate" id="sentiment-0">
+                        <label for="sentiment-0">
+                            <img src="./assets/icons/sad.png" alt="">
+                        </label>
+                    </li>
+                    <li class="m-sentiment__button" role="button">
+                        <input type="radio" name="rate" id="sentiment-1">
+                        <label for="sentiment-1">
+                            <img src="./assets/icons/thinking.png" alt="">
+                        </label>
+                    </li>
+                    <li class="m-sentiment__button" role="button">
+                        <input type="radio" name="rate" id="sentiment-2">
+                        <label for="sentiment-2">
+                            <img src="./assets/icons/happy.png" alt="">
+                        </label>
+                    </li>
+                </ul>
+            </form>
+
+            <div class="m-sentiment__messageArea">
+                <h5 class="m-rate__messageTitle">Tell us how we can improve</h5>
+                <textarea class="m-rate__message" placeholder="Write message here"></textarea>
+            </div>
+
+            <div class="m-row">
+                <button class="a-skip__btn">Skip</button>
+                <input type="submit" class="a-submit__btn" value="Submit"/>
+            </div>
+        </div>
     </section>
     <script src="./index.js"></script>
 </body>

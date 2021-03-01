@@ -6,9 +6,15 @@
   --bg-color: #F2F2F2;
 }
 
+.o-feedback {
+  display: flex;
+  align-items: center;
+}
+
 .m-feedback {
   &__container {
     position: relative;
+    margin-right: 30px;
 
     & input[id="closeFeedback"] {
       display: none;
@@ -52,6 +58,7 @@
       line-height: 19px;
       max-width: 280px;
       text-align: center;
+      margin-top: 15px;
       margin-bottom: 35px;
     }
   }
@@ -161,4 +168,76 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 19px;  
+}
+
+.m-sentiment {
+  position: relative;
+
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+
+  & #closeSentiment {
+    display: none;
+  }
+
+  label[for="closeSentiment"] {
+    display: inline-flex;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 15px;
+  }
+
+  &__button {
+    & label {
+      display: block;
+      border-radius: 10px;
+      height: 90px;
+      width: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    & input {
+      display: none;
+
+      &:checked + label {
+        box-shadow: 0 4px 10px rgba(#000, .15);
+      }
+    }
+  }
+
+  &__messageArea {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    transition: 300ms height ease-in;
+
+    &.-show {
+      height: 95px;
+      margin-bottom: 25px;
+    }
+  }
 }
